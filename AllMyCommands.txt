@@ -370,4 +370,31 @@ Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git push origin master
 Total 0 (delta 0), reused 0 (delta 0)
 To https://github.com/Alyamr96/SE--Repository.git
    121a203..586be85  master -> master
-Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ 
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add "AllMyCommands.txt"
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git commit -m "success"
+[master 5654b3e] success
+ Committer: Ali Amr Osman <aliamrosman@Alis-MacBook-Pro-3.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 373 insertions(+)
+ create mode 100644 AllMyCommands.txt
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git push --all
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.81 KiB | 2.81 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Alyamr96/SE--Repository.git
+   586be85..5654b3e  master -> master
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$
