@@ -1,0 +1,373 @@
+Last login: Tue Feb 13 21:16:32 on ttys000
+Alis-MacBook-Pro-3:~ aliamrosman$ cd Desktop/AlySprint0
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git init
+Initialized empty Git repository in /Users/aliamrosman/Desktop/AlySprint0/.git/
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add "Git Branching - Branches in a Nutshell.txt"
+fatal: pathspec 'Git Branching - Branches in a Nutshell.txt' did not match any files
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add "Branching.txt"
+fatal: pathspec 'Branching.txt' did not match any files
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add "Branching.txt"
+fatal: pathspec 'Branching.txt' did not match any files
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add "Branching.txt"
+fatal: pathspec 'Branching.txt' did not match any files
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add "Distributed Git - Distributed Workflows.txt"
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add "Getting Started - About Version Control from book.txt"
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add "Branching.txt"
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git rm Branching.txt
+error: the following file has changes staged in the index:
+    Branching.txt
+(use --cached to keep the file, or -f to force removal)
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git rm --cached Branching.txt
+rm 'Branching.txt'
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git checkout -- Branching.txt
+error: pathspec 'Branching.txt' did not match any file(s) known to git.
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git reset HEAD Branching.txt
+fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git reset Head Branching.txt
+warning: ignoring dangling symref Head.
+warning: ignoring dangling symref Head.
+fatal: ambiguous argument 'Head': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git reset Branching.txt
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git checkout -- Branching.txt
+error: pathspec 'Branching.txt' did not match any file(s) known to git.
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git ls-files --deleted
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git checkout -- branching.txt
+error: pathspec 'branching.txt' did not match any file(s) known to git.
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git checkout -- Branching.txt
+error: pathspec 'Branching.txt' did not match any file(s) known to git.
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git checkout --Branching.txt
+error: unknown option `Branching.txt'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git checkout Branching.txt
+error: pathspec 'Branching.txt' did not match any file(s) known to git.
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Distributed Git - Distributed Workflows.txt
+	new file:   Getting Started - About Version Control from book.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Branching.txt
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add Branching.txt
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Branching.txt
+	new file:   Distributed Git - Distributed Workflows.txt
+	new file:   Getting Started - About Version Control from book.txt
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git rm Branching.txt
+error: the following file has changes staged in the index:
+    Branching.txt
+(use --cached to keep the file, or -f to force removal)
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git rm Branching.txt
+error: the following file has changes staged in the index:
+    Branching.txt
+(use --cached to keep the file, or -f to force removal)
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git rm --cached Branching.txt
+rm 'Branching.txt'
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Distributed Git - Distributed Workflows.txt
+	new file:   Getting Started - About Version Control from book.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Branching.txt
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git checkout --cached Branching.txt
+error: unknown option `cached'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Distributed Git - Distributed Workflows.txt
+	new file:   Getting Started - About Version Control from book.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Branching.txt
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git reset Branching.txt
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Distributed Git - Distributed Workflows.txt
+	new file:   Getting Started - About Version Control from book.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Branching.txt
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add Branching.txt
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git rm --cached Branching.txt
+rm 'Branching.txt'
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Distributed Git - Distributed Workflows.txt
+	new file:   Getting Started - About Version Control from book.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Branching.txt
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git reset HEAD
+fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git reset HEAD -- Branching.txt
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Distributed Git - Distributed Workflows.txt
+	new file:   Getting Started - About Version Control from book.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Branching.txt
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git checkout
+fatal: You are on a branch yet to be born
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Distributed Git - Distributed Workflows.txt
+	new file:   Getting Started - About Version Control from book.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Branching.txt
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add Branching.txt
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Branching.txt
+	new file:   Distributed Git - Distributed Workflows.txt
+	new file:   Getting Started - About Version Control from book.txt
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git commit -m "commit succeded"
+[master (root-commit) 121a203] commit succeded
+ Committer: Ali Amr Osman <aliamrosman@Alis-MacBook-Pro-3.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 184 insertions(+)
+ create mode 100644 Branching.txt
+ create mode 100644 Distributed Git - Distributed Workflows.txt
+ create mode 100644 Getting Started - About Version Control from book.txt
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git push -all
+error: did you mean `--all` (with two dashes ?)
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git push --all
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git remote add origin https://github.com/Alyamr96/SE-Repository-
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git push --all
+Username for 'https://github.com': Alyamr96
+Password for 'https://Alyamr96@github.com': 
+To https://github.com/Alyamr96/SE-Repository-
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Alyamr96/SE-Repository-'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git remote add origin https://github.com/Alyamr96/SE-Repository-.git
+fatal: remote origin already exists.
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git push --all
+To https://github.com/Alyamr96/SE-Repository-
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Alyamr96/SE-Repository-'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git remote add origin https://github.com/Alyamr96/SE--Repository.git
+fatal: remote origin already exists.
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git remote set-url origin https://github.com/Alyamr96/SE--Repository.git
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git push--all
+git: 'push--all' is not a git command. See 'git --help'.
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git push --all
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 8.06 KiB | 4.03 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/Alyamr96/SE--Repository.git
+ * [new branch]      master -> master
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git checkout -b ReadMe
+Switched to a new branch 'ReadMe'
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git init
+Reinitialized existing Git repository in /Users/aliamrosman/Desktop/AlySprint0/.git/
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git add README.md
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git commit -m "sucess"
+[ReadMe 586be85] sucess
+ Committer: Ali Amr Osman <aliamrosman@Alis-MacBook-Pro-3.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+)
+ create mode 100644 README.md
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git push --all
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 456 bytes | 456.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Alyamr96/SE--Repository.git
+ * [new branch]      ReadMe -> ReadMe
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git checkout master
+Switched to branch 'master'
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git pull origin master
+From https://github.com/Alyamr96/SE--Repository
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git merge ReadMe
+Updating 121a203..586be85
+Fast-forward
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 README.md
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/Alyamr96/SE--Repository.git
+   121a203..586be85  master -> master
+Alis-MacBook-Pro-3:AlySprint0 aliamrosman$ 
